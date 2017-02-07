@@ -1,8 +1,8 @@
 /**
  * Created by chari on 2/6/2017.
  */
-public class RefreshScreen {
-    public static void refreshScreen(Player player, GenerateBoard board){
+class RefreshScreen {
+    static void refreshScreen(Player player, GenerateBoard board){
         for(int i = 0; i < board.getBoardHeight(); i++){ //going through the array that contains the arrays
             for(int j = 0; j < board.getBoardWidth(); j++){ //going through the array in the array
 
@@ -19,7 +19,11 @@ public class RefreshScreen {
                         board.getBoard().get(i).set(j, "$  "); //if the player should not be there, set place to *
                     }
                 }
+
+                //Display the Board
+                System.out.print(board.getBoard().get(i).get(j));
             }
+            System.out.print("\n");
         }
     }
 }

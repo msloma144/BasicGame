@@ -1,13 +1,12 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
  * Created by chari on 2/5/2017.
  */
-public class GenerateBoard {
+class GenerateBoard {
     private ArrayList<ArrayList<String>> board; //playing board
 
-    public GenerateBoard(int width, int height)
+    GenerateBoard(int width, int height)
     {
         //builds board of *'s for playing area
         this.board = new ArrayList<>();
@@ -19,26 +18,16 @@ public class GenerateBoard {
         }
     }
 
-    protected int getBoardWidth(){
+    int getBoardWidth(){
         return board.size();
     }
 
-    protected int getBoardHeight(){
+    int getBoardHeight(){
         return board.get(1).size();
     }
 
-    protected ArrayList<ArrayList<String>> getBoard(){
+    ArrayList<ArrayList<String>> getBoard(){
         return this.board;
     }
 
-    //displays the board
-    public String toString(){
-        for(int i = 0; i < board.size(); i++){
-            for(int j = 0; j < board.get(i).size(); j++){
-                System.out.print(board.get(i).get(j));
-            }
-            System.out.print("\n");
-        }
-        return "";
-    }
 }
