@@ -11,9 +11,8 @@ public class Runner {
 
         while(!quitGame){
             System.out.println("Press \"q\" to quit the game!\n");
-            RefreshScreen.refreshScreen(player1, board1); //position player
+            RefreshScreen.refreshScreen(player1, board1); //position player and display board
 
-            System.out.print(board1); //display board
             player1.movePlayer(board1); //call for player to move
 
             System.out.println("X: " + player1.getX() + " Y: " + player1.getY());
