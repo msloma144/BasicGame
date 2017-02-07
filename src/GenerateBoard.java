@@ -5,23 +5,33 @@ import java.util.ArrayList;
  * Created by chari on 2/5/2017.
  */
 public class GenerateBoard {
-    private ArrayList<ArrayList<String>> board;
+    private ArrayList<ArrayList<String>> board; //playing board
+
     public GenerateBoard(int width, int height)
     {
-        this.board = buildBoard(width, height);
-    }
-
-    private ArrayList<ArrayList<String>> buildBoard(int width, int height){
-        ArrayList<ArrayList<String>> board = new ArrayList<ArrayList<String>>();
-        for(int i = 0; i < width; i++){
-            board.add(new ArrayList<String>());
-            for(int j = 0; j < height; j++){
-                board.get(i).add("*");
+        //builds board of *'s for playing area
+        this.board = new ArrayList<>();
+        for(int i = 0; i < width; i++){ //make the height of the board
+            board.add(new ArrayList<>());
+            for(int j = 0; j < height; j++){ //fill the board
+                this.board.get(i).add("*");
             }
         }
-        return board;
     }
 
+    protected int getBoardWidth(){
+        return board.size();
+    }
+
+    protected int getBoardHeight(){
+        return board.get(1).size();
+    }
+
+    protected ArrayList<ArrayList<String>> getBoard(){
+        return this.board;
+    }
+
+    //displays the board
     public String toString(){
         for(int i = 0; i < board.size(); i++){
             for(int j = 0; j < board.get(i).size(); j++){
