@@ -9,14 +9,14 @@ public class RefreshScreen {
                 //if the player is not in the correct position then delete them from that position,
                 //if the loop reaches the position the player should be at, then place the player there
 
-                if(board.getBoard().get(i).get(j).equals("$")){ //if player is displayed at location
+                if(board.getBoard().get(i).get(j).equals("$  ")){ //if player is displayed at location
                     if(player.getX() != j || player.getY() != i) { //check if the player should be there
-                        board.getBoard().get(i).set(j, "*"); //if the player should not be there, set place to *
+                        board.getBoard().get(i).set(j, "*  "); //if the player should not be there, set place to *
                     }
                 }
                 else{
                     if(player.getX() == j && player.getY() == i) { //check if the player should be there
-                        board.getBoard().get(i).set(j, "$"); //if the player should not be there, set place to *
+                        board.getBoard().get(i).set(j, "$  "); //if the player should not be there, set place to *
                     }
                 }
             }

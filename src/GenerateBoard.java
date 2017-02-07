@@ -14,7 +14,7 @@ public class GenerateBoard {
         for(int i = 0; i < width; i++){ //make the height of the board
             board.add(new ArrayList<>());
             for(int j = 0; j < height; j++){ //fill the board
-                this.board.get(i).add("*");
+                this.board.get(i).add("*  ");
             }
         }
     }
