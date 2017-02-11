@@ -6,6 +6,7 @@ import java.io.IOException;
 public class Runner {
     public static void main(String[] args)throws IOException{
         GenerateBoard board1 = new GenerateBoard(10,10); // make new board
+        //GenerateMaze board1 = new GenerateMaze();
         Player player1 = new Player(); // make new player
         boolean quitGame = false; // holder variable
 
