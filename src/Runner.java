@@ -5,16 +5,18 @@ import java.io.IOException;
  */
 public class Runner {
     public static void main(String[] args)throws IOException{
-        GenerateBoard board1 = new GenerateBoard(10,10); // make new board
-        //GenerateMaze board1 = new GenerateMaze();
+        //GenerateBoard board1 = new GenerateBoard(10,10); // make new board
+
+        GenerateMaze maze1 = new GenerateMaze();
+
         Player player1 = new Player(); // make new player
         boolean quitGame = false; // holder variable
 
         while(!quitGame){
             System.out.println("Press \"q\" to quit the game!\n");
-            RefreshScreen.refreshScreen(player1, board1); //position player and display board
+            RefreshScreen.refreshScreen(player1, maze1); //position player and display board
 
-            player1.movePlayer(board1); //call for player to move
+            player1.movePlayer(maze1); //call for player to move
 
             System.out.println("X: " + player1.getX() + " Y: " + player1.getY());
         }
