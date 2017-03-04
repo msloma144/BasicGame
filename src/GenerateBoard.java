@@ -10,9 +10,9 @@ class GenerateBoard {
     {
         //builds board of *'s for playing area
         this.board = new ArrayList<>();
-        for(int i = 0; i < width; i++){ //make the height of the board
+        for(int i = 0; i < height; i++){ //make the height of the board
             board.add(new ArrayList<>());
-            for(int j = 0; j < height; j++){ //fill the board
+            for(int j = 0; j < width; j++){ //fill the board
                 this.board.get(i).add("*  ");
             }
         }
