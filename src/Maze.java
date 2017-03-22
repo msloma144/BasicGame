@@ -1,5 +1,3 @@
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,7 +14,7 @@ class Maze {
         generateMaze(selectedBoard);
     }
 
-    void generateMaze(String selectedBoard)throws IOException{
+    private void generateMaze(String selectedBoard)throws IOException{
         //bringing contents of file in
         File fileName = new File("D:\\Michael\\Desktop\\Synced Folder\\Programming\\Java\\BasicGame\\src\\mazeMaps.txt"); //bringing contents of file in
         Scanner inFile = new Scanner(fileName);

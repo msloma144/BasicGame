@@ -37,21 +37,21 @@ class RefreshScreen {
 
                 //Check if there is a boarder at the location
                 //
-                if ((player.getX() == j && player.getY() == i) && (board.getBoard().get(i).get(j).equals("---") || board.getBoard().get(i).get(j).equals("--") ||
+                if ((player.getX() == j && player.getY() == i) && (board.getBoard().get(i).get(j).equals("---") || board.getBoard().get(i).get(j).equals("-") ||
                         board.getBoard().get(i).get(j).equals("|  ") || board.getBoard().get(i).get(j).equals("|"))) {
                     //set player back to original location
                     player.setX(player.getLastPosX());
                     player.setY(player.getLastPosY());
                     //System.out.println("posx: " + player.getX() + " posy: " + player.getY());
                     board.playerReset(player.getY(), player.getX()); //reset player location on board
-                } else {
-                    if (player.getX() == j && player.getY() == i) { //check if the player should be there
+                }
+                else if (player.getX() == j && player.getY() == i) { //check if the player should be there
                         board.getBoard().get(i).set(j, "$  "); //set player to correct location
-                    } else if (board.getBoard().get(i).get(j).equals("$  ")) { //if player is displayed at location
-                        if (player.getX() != j || player.getY() != i) { //check if the player should be there
-                            board.getBoard().get(i).set(j, "*  "); //if the player should not be there, set place to *
-                            System.out.println("hit");
-                        }
+                }
+                else if (board.getBoard().get(i).get(j).equals("$  ")) { //if player is displayed at location
+                    if (player.getX() != j || player.getY() != i) { //check if the player should be there
+                        board.getBoard().get(i).set(j, "*  "); //if the player should not be there, set place to *
+                        System.out.println("hit");
                     }
                 }
             }

@@ -11,7 +11,7 @@ class Board {
         generateBoard(width, height);
     }
 
-    void generateBoard(int width, int height){
+    private void generateBoard(int width, int height){
         //builds board of *'s for playing area
         this.board = new ArrayList<>();
         for(int i = 0; i < height; i++){ //make the height of the board
