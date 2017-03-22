@@ -1,3 +1,5 @@
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -53,24 +55,26 @@ class Maze {
     private String pickBoard()
     {
         Scanner in = new Scanner(System.in);
-
         System.out.print("Board: ");
-
         String board = "testmaze1";
         // String board = in.nextLine();
-
         return board;
-    }
-    int getBoardWidth(){
-        return maze.size();
     }
 
     int getBoardHeight(){
+        return maze.size();
+    }
+
+    int getBoardWidth(){
         return maze.get(1).size();
     }
 
     ArrayList<ArrayList<String>> getBoard(){
         return this.maze;
+    }
+
+    void playerReset(int playery, int playerx){
+        this.maze.get(playery).set(playerx, "$  ");
     }
 
 }
