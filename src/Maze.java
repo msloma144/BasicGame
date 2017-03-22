@@ -14,7 +14,7 @@ class Maze {
         generateMaze(selectedBoard);
     }
 
-    void generateMaze(String selectedBoard)throws IOException{
+    private void generateMaze(String selectedBoard)throws IOException{
         //bringing contents of file in
         File fileName = new File("D:\\Michael\\Desktop\\Synced Folder\\Programming\\Java\\BasicGame\\src\\mazeMaps.txt"); //bringing contents of file in
         Scanner inFile = new Scanner(fileName);
@@ -53,24 +53,26 @@ class Maze {
     private String pickBoard()
     {
         Scanner in = new Scanner(System.in);
-
         System.out.print("Board: ");
-
         String board = "testmaze1";
         // String board = in.nextLine();
-
         return board;
-    }
-    int getBoardWidth(){
-        return maze.size();
     }
 
     int getBoardHeight(){
+        return maze.size();
+    }
+
+    int getBoardWidth(){
         return maze.get(1).size();
     }
 
     ArrayList<ArrayList<String>> getBoard(){
         return this.maze;
+    }
+
+    void playerReset(int playery, int playerx){
+        this.maze.get(playery).set(playerx, "$  ");
     }
 
 }

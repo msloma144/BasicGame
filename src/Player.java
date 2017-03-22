@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**
  * Created by chari on 2/5/2017.
  */
-public class Player {
+class Player {
     private int posX;
     private int posY;
     private int lastPosX;
